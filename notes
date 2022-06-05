@@ -1,0 +1,16 @@
+lerna notice cli v3.22.1
+lerna info Executing command in 2 packages: "npm run start"
+speedtest-server: > speedtest-server@0.5.3 start
+speedtest-server: > npm run server
+speedtest-web: > speedtest-web@0.5.3 start
+speedtest-web: > npm run build
+speedtest-web: > speedtest-web@0.5.3 build
+speedtest-web: > webpack --env=prod --progress --profile --colors
+speedtest-server: > speedtest-server@0.5.3 server
+speedtest-server: > export BASE_PATH=../web/dist HTTP_PORT=5080 HTTPS_PORT=5443; node server.js
+speedtest-web: CLI for webpack must be installed.
+speedtest-web:   webpack-cli (https://github.com/webpack/webpack-cli)
+speedtest-web: We will use "npm" to install the CLI via "npm install -D webpack-cli".
+speedtest-web: Do you want to install 'webpack-cli' (yes/no): 
+lerna ERR! npm run start exited 1 in 'speedtest-web'
+lerna WARN complete Waiting for 1 child process to exit. CTRL-C to exit immediately.
